@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UNKNOWN ARMIES</title>
+
+    <style>
+        /* =========================================================
+   UNKNOWN ARMIES
+   Retro GeoCities / late 90s aesthetic
+   ========================================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+
+            background:
+                url("img/back/stars_back.gif") repeat;
+
+            background-color: #000;
+
+            color: #fff;
+            font-family: "Times New Roman", serif;
+
+            overflow-x: hidden;
+        }
+
+        /* Main fixed-width page on desktop */
+
+        .site {
+            width: 830px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px 0 30px;
+        }
+
+        /* =========================================================
+   Header
+   ========================================================= */
+
+        .header {
+            width: 770px;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+            width: 770px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .welcome {
+            margin-top: -5px;
+            margin-bottom: 8px;
+
+            color: #00ffff;
+            font-family: "Courier New", monospace;
+            font-size: 18px;
+            text-shadow:
+                0 0 4px #00ffff,
+                0 0 10px #00ffff;
+        }
+
+        /* Decorative objects */
+
+        .ufo {
+            position: absolute;
+            left: -75px;
+            top: 5px;
+            width: 95px;
+        }
+
+        .construction {
+            position: absolute;
+            right: -65px;
+            top: 15px;
+            width: 110px;
+        }
+
+        /* =========================================================
+   Navigation
+   ========================================================= */
+
+        .navigation {
+            width: 770px;
+            max-width: 100%;
+            margin: 5px auto 15px;
+
+            border: 3px ridge #999;
+            background: #111;
+        }
+
+        .navigation table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .navigation td {
+            width: 25%;
+            height: 55px;
+            padding: 0;
+
+            border: 1px solid #555;
+
+            background:
+                linear-gradient(#8d8d8d,
+                    #222,
+                    #555);
+
+            text-align: center;
+        }
+
+        .navigation td:hover {
+            background:
+                linear-gradient(#bcbcbc,
+                    #444,
+                    #777);
+        }
+
+        .navigation a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100%;
+
+            color: #fff;
+            text-decoration: none;
+
+            font-family: "Times New Roman", serif;
+            font-size: 25px;
+            font-weight: bold;
+
+            text-shadow:
+                2px 2px 2px #000,
+                0 0 5px #aaa;
+        }
+
+        /* =========================================================
+   Main content
+   ========================================================= */
+
+        .main {
+            width: 770px;
+            max-width: 100%;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 155px minmax(0, 1fr) 155px;
+            gap: 12px;
+        }
+
+        /* =========================================================
+   Retro panels
+   ========================================================= */
+
+        .panel {
+            border: 2px ridge #777;
+
+            background:
+                rgba(0, 0, 0, 0.88);
+
+            padding: 10px;
+
+            box-shadow:
+                0 0 0 1px #111,
+                0 0 8px #333;
+
+            margin-bottom: 12px;
+        }
+
+        .panel-title {
+            margin: 0 0 10px;
+
+            color: #00ffff;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            text-shadow:
+                0 0 4px #00ffff;
+        }
+
+        .panel-title.green {
+            color: #00ff00;
+
+            text-shadow:
+                0 0 4px #00ff00;
+        }
+
+        /* =========================================================
+   Left sidebar
+   ========================================================= */
+
+        .alien {
+            display: block;
+            width: 75px;
+            margin: 0 auto 10px;
+        }
+
+        .status {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            font-family: "Courier New", monospace;
+            font-size: 12px;
+        }
+
+        .status li {
+            margin: 7px 0;
+        }
+
+        .status li::before {
+            content: "●";
+
+            margin-right: 5px;
+
+            color: #00ff00;
+
+            text-shadow:
+                0 0 5px #00ff00;
+        }
+
+        /* Visitor counter */
+
+        .counter {
+            margin-top: 12px;
+            padding-top: 10px;
+
+            border-top: 1px solid #777;
+
+            text-align: center;
+
+            color: #00ff00;
+
+            font-family: "Courier New", monospace;
+            font-size: 11px;
+        }
+
+        .counter-number {
+            display: inline-block;
+
+            margin: 5px 0;
+
+            padding: 3px 5px;
+
+            background: #000;
+
+            border: 2px inset #555;
+
+            color: #00ff00;
+
+            font-family: "Courier New", monospace;
+            font-size: 20px;
+            letter-spacing: 3px;
+
+            text-shadow:
+                0 0 5px #00ff00;
+        }
+
+        /* =========================================================
+   Center
+   ========================================================= */
+
+        .center {
+            min-width: 0;
+        }
+
+        .welcome-box {
+            min-height: 220px;
+
+            border: 2px ridge #777;
+
+            background: rgba(0, 0, 0, 0.85);
+
+            padding: 18px;
+
+            box-shadow:
+                0 0 12px rgba(255, 255, 255, 0.15);
+        }
+
+        .welcome-box h1 {
+            margin: 0 0 15px;
+
+            color: #00ff00;
+
+            text-align: center;
+
+            font-family: "Times New Roman", serif;
+            font-size: 24px;
+
+            text-shadow:
+                0 0 5px #00ff00;
+        }
+
+        .welcome-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .space-picture {
+            width: 125px;
+            max-width: 35%;
+            height: auto;
+
+            border: 2px ridge #aaa;
+        }
+
+        .welcome-text {
+            color: #ddd;
+
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        .retro-link {
+            color: #ff00ff;
+            text-decoration: underline;
+
+            cursor: pointer;
+        }
+
+        .retro-link:hover {
+            color: #fff;
+        }
+
+        /* =========================================================
+   News
+   ========================================================= */
+
+        .news {
+            margin-top: 12px;
+
+            border: 2px ridge #777;
+
+            background: rgba(0, 0, 0, 0.9);
+
+            padding: 15px;
+        }
+
+        .news h2 {
+            margin: 0 0 10px;
+
+            color: #00ff00;
+
+            font-size: 20px;
+
+            text-shadow:
+                0 0 5px #00ff00;
+        }
+
+        .news-item {
+            padding: 7px 0;
+
+            border-bottom: 1px dotted #777;
+
+            color: #ddd;
+
+            font-size: 15px;
+        }
+
+        .news-item::before {
+            content: "» ";
+
+            color: #00ffff;
+        }
+
+        .news-date {
+            color: #aaa;
+            font-family: "Courier New", monospace;
+        }
+
+        /* =========================================================
+   Right sidebar
+   ========================================================= */
+
+        .cool-links {
+            list-style: none;
+
+            padding: 0;
+            margin: 0;
+        }
+
+        .cool-links li {
+            margin: 8px 0;
+
+            font-size: 13px;
+        }
+
+        .cool-links li::before {
+            content: "▶";
+
+            margin-right: 5px;
+
+            color: #00ff00;
+
+            font-size: 9px;
+        }
+
+        .cool-links a {
+            color: #ff00ff;
+            text-decoration: underline;
+        }
+
+        .cool-links a:hover {
+            color: #00ffff;
+        }
+
+        .guestbook {
+            text-align: center;
+        }
+
+        .guestbook img {
+            display: block;
+            width: 100px;
+            max-width: 100%;
+            margin: 5px auto 10px;
+        }
+
+        /* =========================================================
+   Music player
+   ========================================================= */
+
+        .music-player {
+            margin-top: 12px;
+
+            padding: 10px;
+
+            border: 4px ridge #777;
+
+            background:
+                linear-gradient(#555,
+                    #222 25%,
+                    #111 70%,
+                    #555);
+
+            color: #ddd;
+
+            font-family: "Courier New", monospace;
+        }
+
+        .player-display {
+            padding: 10px;
+
+            background: #050505;
+
+            border: 2px inset #777;
+
+            color: #ffcc33;
+
+            text-shadow:
+                0 0 5px #ff9900;
+
+            font-size: 13px;
+        }
+
+        .player-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 5px;
+
+            margin-top: 10px;
+        }
+
+        .player-buttons button {
+            min-width: 40px;
+            height: 25px;
+
+            border: 2px outset #aaa;
+
+            background: #555;
+
+            color: #fff;
+
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+        }
+
+        .player-buttons button:active {
+            border-style: inset;
+        }
+
+        /* =========================================================
+   Footer
+   ========================================================= */
+
+        .footer {
+            width: 770px;
+            max-width: 100%;
+
+            margin: 15px auto 0;
+
+            padding-top: 10px;
+
+            border-top: 2px solid #ff0060;
+
+            text-align: center;
+        }
+
+        .footer-images {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 4px;
+        }
+
+        .footer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .copyright {
+            margin-top: 10px;
+
+            color: #aaa;
+
+            font-size: 13px;
+        }
+
+        /* =========================================================
+   MOBILE
+   ========================================================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                overflow-x: hidden;
+            }
+
+            .site {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .header {
+                width: 100%;
+            }
+
+            .ufo,
+            .construction {
+                display: none;
+            }
+
+            .logo {
+                width: 100%;
+                max-width: 770px;
+            }
+
+            .welcome {
+                font-size: 14px;
+            }
+
+            .navigation {
+                width: 100%;
+            }
+
+            .navigation table {
+                table-layout: fixed;
+            }
+
+            .navigation td {
+                height: 45px;
+            }
+
+            .navigation a {
+                font-size: 16px;
+            }
+
+            .main {
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            /*
+       Keep the original visual hierarchy:
+       left sidebar
+       center
+       right sidebar
+    */
+
+            .left {
+                order: 1;
+            }
+
+            .center {
+                order: 2;
+            }
+
+            .right {
+                order: 3;
+            }
+
+            .welcome-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .space-picture {
+                max-width: 180px;
+                width: 45%;
+            }
+
+            .welcome-text {
+                font-size: 15px;
+            }
+
+            .news {
+                overflow: hidden;
+            }
+
+            .music-player {
+                width: 100%;
+            }
+        }
+
+        /* Very narrow phones */
+
+        @media (max-width: 400px) {
+
+            .navigation a {
+                font-size: 13px;
+            }
+
+            .welcome-box {
+                padding: 10px;
+            }
+
+            .welcome-box h1 {
+                font-size: 19px;
+            }
+
+            .welcome-text {
+                font-size: 14px;
+            }
+
+            .panel-title {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="site">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <img class="ufo" src="img/ufo.gif" alt="UFO">
+
+            <img class="logo" src="img/header/Ezee_logo1.png" alt="Ezee Goode Homepage">
+
+            <div class="welcome">
+                Welcome to my digital domain...
+            </div>
+
+        </header>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="navigation">
+
+            <table cellpadding="0" cellspacing="0">
+
+                <tr>
+
+                    <td>
+                        <a href="BoutMe.html">
+                            BoutMe
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Pics.html">
+                            Pics
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="Links.html">
+                            Links
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="ezee_homepage.html">
+                            Home
+                        </a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </nav>
+
+
+        <!-- MAIN -->
+
+        <main class="main">
+
+
+            <!-- LEFT COLUMN -->
+
+            <aside class="left">
+
+                <section class="panel">
+
+                    <h2 class="panel-title green">
+                        System Status
+                    </h2>
+
+                    <img class="alien" src="img/alien.gif" alt="Alien">
+
+                    <ul class="status">
+
+                        <li>Brain: Online</li>
+                        <li>Heart: Active</li>
+                        <li>Soul: Searching</li>
+                        <li>Webmaster: Ezee</li>
+
+                    </ul>
+
+                    <div class="counter">
+
+                        You are visitor #
+
+                        <div class="counter-number">
+                            001337
+                        </div>
+
+                        Since May '99
+
+                        <br><br>
+
+                        Thankz 4 stoppin' by!
+
+                    </div>
+
+                </section>
+
+            </aside>
+
+
+            <!-- CENTER COLUMN -->
+
+            <section class="center">
+
+
+                <!-- WELCOME -->
+
+                <section class="welcome-box">
+
+                    <h1>
+                        Добро пожаловать!
+                    </h1>
+
+                    <div class="welcome-content">
+
+                        <img class="space-picture" src="img/space.jpg" alt="Space">
+
+                        <div class="welcome-text">
+
+                            Допустим, у вас есть топор, и вы хотите его продать. Вы можете разместить объявление на
+                            сайте, и кто-то, кто ищет топор, может найти ваше объявление и связаться с вами.
+
+                            <a class="retro-link" href="guestbook.html">
+                                guestbook
+                            </a>!
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- NEWS -->
+
+                <section class="news">
+
+                    <h2>
+                        News &amp; Updates
+                    </h2>
+
+                    <div class="news-item">
+                        <span class="news-date">
+                            08/10/99
+                        </span>
+                        -
+                        Added
+                        <a class="retro-link" href="Pics.html">
+                            new pics
+                        </a>
+                        in the gallery!
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-date">
+                            08/07/99
+                        </span>
+                        -
+                        Updated
+                        <a class="retro-link" href="Links.html">
+                            links
+                        </a>
+                        page.
+                    </div>
+
+                    <div class="news-item">
+                        <span class="news-date">
+                            08/01/99
+                        </span>
+                        Добро пожаловать!
+                    </div>
+
+                    <p style="
+                    text-align:center;
+                    color:#00ffff;
+                    font-family:'Courier New', monospace;
+                ">
+                        Check back often for more updates!
+                    </p>
+
+                </section>
+
+
+                <!-- MUSIC PLAYER -->
+
+                <section class="music-player">
+
+                    <div class="player-display">
+
+                        <span>▶</span>
+
+                        <span>
+                            00:00
+                        </span>
+
+                        &nbsp;
+
+                        <strong>
+                            Mint Royale - Diagonal Girl
+                        </strong>
+
+                        <br>
+
+                        155 kbps&nbsp;&nbsp;44 kHz&nbsp;&nbsp;stereo
+
+                    </div>
+
+                    <div class="player-buttons">
+
+                        <button>⏮</button>
+                        <button>◀</button>
+                        <button>▶</button>
+                        <button>▶▶</button>
+                        <button>■</button>
+
+                    </div>
+
+                </section>
+
+
+            </section>
+
+
+            <!-- RIGHT COLUMN -->
+
+            <aside class="right">
+
+
+                <!-- LINKS -->
+
+                <section class="panel">
+
+                    <h2 class="panel-title">
+                        Cool Links
+                    </h2>
+
+                    <ul class="cool-links">
+
+                        <li>
+                            <a href="#">
+                                Devil's Workshop
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                GeoCities
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                The 90's Network
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Mp3.com
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Ebaum's World
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                More Cool Sites!
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- GUESTBOOK -->
+
+                <section class="panel guestbook">
+
+                    <h2 class="panel-title">
+                        SIGN MY
+                    </h2>
+
+                    <img src="img/guestbook.gif" alt="Guestbook">
+
+                    <a class="retro-link" href="guestbook.html">
+                        View Guestbook
+                    </a>
+
+                </section>
+
+
+                <!-- ABOUT -->
+
+                <section class="panel">
+
+                    <h2 class="panel-title">
+                        About This Site
+                    </h2>
+
+                    <p>
+                        Best viewed with:
+                    </p>
+
+                    <ul>
+                        <li>800x600 or higher</li>
+                        <li>Netscape 4.0+</li>
+                        <li>Winamp 2.0+</li>
+                    </ul>
+
+                    <p style="color:#00ffff;">
+                        This site is 100% pure HTML &amp; love!
+                    </p>
+
+                    <p>
+                        Last Updated:
+                        <a class="retro-link" href="#">
+                            August 10, 1999
+                        </a>
+                    </p>
+
+                </section>
+
+
+            </aside>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+
+            <div class="footer-images">
+
+                <a href="#">
+                    <img src="img/footer/animation.gif" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="img/footer/RaveNow3.gif" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="img/footer/clip2.gif" alt="">
+                </a>
+
+                <img src="img/footer/anybrow.gif" alt="">
+
+                <a href="#">
+                    <img src="img/footer/cooltxt.gif" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="img/footer/geocities_area_51.gif" alt="">
+                </a>
+
+                <a href="#">
+                    <img src="img/footer/ada.gif" alt="">
+                </a>
+
+                <a href="mailto:ezeegoode@gmail.com">
+                    <img src="img/footer/email-icon.gif" alt="Email">
+                </a>
+
+                <img src="img/footer/got_html.gif" alt="HTML">
+
+                <a href="index.html">
+                    <img src="img/footer/startpage_button.gif" alt="Start Page">
+                </a>
+
+            </div>
+
+            <div class="copyright">
+
+                © 1994-19XX EzeeGoode
+                All rights reserved.
+
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+
+</div>
+
+</html>
