@@ -1,0 +1,308 @@
+#audioDownload,
+#audioLoop,
+#hideBackground,
+#hideSide,
+#muteButton,
+#navbarToggleButton,
+#playButton,
+#progressBar,
+#spinningDisk,
+#visualizerCanvas,
+#volumeSlider,
+.current-album img:hover,
+.music-player-controls button {
+  cursor: url("/images/cursors/nightcore_select.cur"), auto;
+}
+#mainHeader,
+#navigationMenu {
+  border-right: 1px solid #273192;
+  border-left: 1px solid #273192;
+}
+body {
+  background: url("/images/backgrounds/dark_aero.jpg") center center/cover
+    no-repeat fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  scrollbar-color: rgba(48, 92, 187, 0.8) rgba(31, 31, 31, 0.65);
+  cursor: url("/images/cursors/nightcore_normal.cur"), auto;
+}
+.mfp-arrow-left:after {
+  border-right: 17px solid #65a3ff !important;
+}
+.mfp-arrow-left:before {
+  border-right: 27px solid #436ead !important;
+}
+.mfp-arrow-right:after {
+  border-left: 17px solid #65a3ff !important;
+}
+.mfp-arrow-right:before {
+  border-left: 27px solid #436ead !important;
+}
+a {
+  color: #37d7ff;
+}
+#albumCover,
+#audioShuffle,
+#themeMenu img,
+a:hover {
+  cursor: url("/images/cursors/nightcore_select.cur"), auto !important;
+}
+::selection {
+  background: #222cb3;
+}
+#logo {
+  filter: hue-rotate(100deg);
+}
+#logo:hover {
+  filter: hue-rotate(100deg) brightness(80%);
+}
+#mainContent a:visited {
+  color: #9437ff;
+}
+input[type="range"] {
+  accent-color: #37d7ff;
+}
+#mascotInformation strong,
+strong {
+  color: #2e90ff;
+}
+#navbarToggleButton {
+  filter: hue-rotate(50deg);
+}
+.nav-active {
+  background: linear-gradient(
+    to bottom,
+    rgba(202, 200, 200, 0.2) 0,
+    rgba(129, 129, 129, 0.2) 20%,
+    rgba(92, 92, 92, 0.2) 50%,
+    rgba(29, 73, 23, 0.3) 50%,
+    rgba(0, 26, 255, 0.7) 100%
+  ) !important;
+  color: #30bdff;
+}
+.music-player-header,
+.music-player-status,
+h1,
+h2,
+h3 {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 90, 226, 0.925) 0,
+    rgba(24, 33, 136, 0.925) 55%,
+    rgba(4, 11, 43, 0.925) 55%,
+    rgba(19, 30, 94, 0.925) 100%
+  ) !important;
+}
+.page-swap-div a:nth-child(2) img,
+.page-swap-div a:nth-child(3) img {
+  filter: hue-rotate(130deg);
+}
+#changeWallpaper,
+#toggleCDmode,
+#toggleDancer,
+#toggleScreensaver1,
+#toggleScreensaver2,
+.separator-1,
+.separator-2,
+.separator-3 {
+  color: #3ea8ff !important;
+}
+#activeSong,
+#activeSong:hover {
+  color: #48d4ff;
+}
+#audioName,
+#timeLeft,
+#volumeIndicator {
+  color: #39a6ff;
+}
+#musicHeaderImage {
+  margin: -5px -10px -10px -5px;
+}
+.music-player-controls {
+  background: linear-gradient(
+    to bottom,
+    #798dfc 0,
+    #4057da 20%,
+    #283983 50%,
+    #151e44 51%,
+    #151e44 60%,
+    #092397 100%
+  );
+  border-left: 1px solid #346eb1;
+  border-right: 1px solid #346eb1;
+}
+.music-player-controls button {
+  filter: hue-rotate(110deg);
+}
+#musicPlayerPlaylist {
+  scrollbar-color: rgba(48, 94, 163, 0.9) rgba(73, 73, 73, 0.4);
+  background:
+    url("/images/music_player/scanlines.png"),
+    linear-gradient(90deg, rgba(13, 22, 143, 0.8) 0, rgba(20, 20, 20, 0.1) 70%);
+}
+#activeSong {
+  text-decoration: underline;
+}
+.albums.active img {
+  outline: #48d4ff solid 2px;
+}
+.music-player-right-side {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(27, 35, 77, 0.5) 100%
+  );
+}
+::-webkit-slider-thumb {
+  background: linear-gradient(to left, #356de7 20%, #2b3ac2 100%);
+  box-shadow: -300px 0 0 300px #2b3ac2;
+}
+::-moz-range-thumb {
+  background: linear-gradient(to left, #356de7 20%, #2b3ac2 100%);
+  box-shadow: -300px 0 0 300px #2b3ac2;
+}
+::-ms-fill-lower {
+  background: #2b3ac2;
+}
+#visualizerCanvas {
+  filter: hue-rotate(115deg) saturate(4);
+}
+#playButton {
+  filter: hue-rotate(120deg);
+}
+#playButton:hover {
+  filter: hue-rotate(120deg) brightness(80%);
+}
+#audioDownload,
+#copyButton,
+#galleryForm button,
+#mediaDownload,
+#navSoundToggle,
+#navThemeChanger,
+#scrollTop,
+#videoDownload,
+.icon-downloads,
+.page-swap-div a {
+  background: linear-gradient(
+    to bottom,
+    #95a5fd 0,
+    #4d7af5 5%,
+    #3243db 50%,
+    #161e6e 50%,
+    #1b326b 100%
+  );
+}
+#audioDownload:hover,
+#copyButton:hover,
+#galleryForm button:hover,
+#mediaDownload:hover,
+#navSoundToggle:hover,
+#navThemeChanger:hover,
+#scrollTop:hover,
+#videoDownload:hover,
+.icon-downloads:hover,
+.page-swap-div a:hover {
+  background: linear-gradient(
+    to bottom,
+    #95a5fd 0,
+    #4d7af5 5%,
+    #3243db 50%,
+    #161e6e 50%,
+    #3969e0 100%
+  );
+}
+pre {
+  color: #00aeff;
+}
+#mainHeader {
+  background: linear-gradient(
+    180deg,
+    rgba(101, 126, 236, 0.9) 0,
+    rgba(34, 42, 121, 0.9) 20%,
+    rgba(9, 13, 53, 0.9) 40%,
+    rgba(10, 11, 66, 0.93) 100%
+  );
+  border-top: 2px solid #273192;
+}
+#navigationMenu {
+  background: linear-gradient(
+    100deg,
+    rgba(12, 12, 12, 0.8) 50%,
+    rgba(20, 29, 77, 0.8) 100%
+  );
+  border-bottom: 1px solid #273192;
+}
+.navbar-titles {
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 90, 226) 0,
+    rgba(24, 33, 136) 55%,
+    rgba(4, 11, 43) 55%,
+    rgba(31, 50, 160) 100%
+  ) !important;
+}
+.nav-categories {
+  background: rgba(7, 15, 126, 0.3);
+  border: 1px solid #152866;
+}
+.nav-inactive {
+  background: linear-gradient(
+    to bottom,
+    rgba(106, 112, 196, 0.3) 0,
+    rgba(98, 105, 146, 0.3) 20%,
+    rgba(70, 83, 204, 0.3) 60%,
+    rgba(16, 17, 82, 0.3) 60%,
+    rgba(25, 41, 112, 0.3) 100%
+  );
+}
+.nav-inactive:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(133, 145, 255, 0.2) 0,
+    rgba(70, 83, 204, 0.2) 60%,
+    rgba(16, 17, 82, 0.3) 60%,
+    rgba(0, 26, 255, 0.3) 100%
+  );
+}
+.nav-active:before,
+.nav-inactive:before {
+  background: linear-gradient(
+    to bottom,
+    rgba(75, 86, 241, 0.7) 0,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+#mainContent {
+  background: url("/images/aero_glass.png"), rgba(12, 19, 48, 0.5);
+  border-right: 1px solid #202a80;
+  border-bottom: 1px solid #202a80;
+}
+.styled-containers {
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 12, 12, 0.9) 40%,
+    rgba(13, 21, 66, 0.9) 90%
+  ) !important;
+}
+.gallery-containers .download-links {
+  background: linear-gradient(
+    to bottom,
+    #697dec 0,
+    #264cb4 20%,
+    #212b86 60%,
+    #152244 61%,
+    #06174e 100%
+  ) !important;
+}
+.gallery-containers .download-links:hover {
+  background: linear-gradient(
+    to bottom,
+    #697dec 0,
+    #264cb4 20%,
+    #212b86 60%,
+    #152244 61%,
+    #1334a0 100%
+  ) !important;
+}

@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Frutiger Aero Archive - Music</title>
+  <meta name="description"
+    content="Interactive Music Player featuring a large music selection of Frutiger Aero, Nightcore, EDM, and other popular styles of the 2000s/2010s." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="darkreader-lock" content="" />
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="FA Archive" />
+  <link rel="manifest" href="images/favicon/site.webmanifest" />
+  <link rel="canonical" href="https://frutigeraeroarchive.org/music" />
+  <link rel="stylesheet" href="css/global.min.css?v=6.0" />
+  <link rel="stylesheet" href="css/music.min.css?v=2.9" />
+  <noscript>
+    <style>
+      .playlist-table-of-contents,
+      .playlist-right,
+      .album-selection-div,
+      .separator-1,
+      .separator-2,
+      .separator-3,
+      #toggleCDmode,
+      #changeWallpaper,
+      #toggleDancer,
+      .js-currently-playing,
+      .js-article {
+        display: none !important;
+      }
+
+      .no-js-article,
+      .no-js-currently-playing,
+      #noScriptPlaylist {
+        display: block !important;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+  <div id="backgroundYoutubeVideoContainer"></div>
+  <div id="background"></div>
+  <div id="websiteContainer">
+    <!-- Spacer -->
+    <div class="website-spacers"></div>
+    <!-- Header -->
+    <header id="mainHeader">
+      <div class="header-logo-text">
+        <a href="https://frutigeraeroarchive.org/" title="Back to Home"><img src="images/themes/default/logo.png"
+            id="logo" alt="Green-tinted Windows Logo" /></a>
+        <div class="header-text">
+          <span class="header-title">The Frutiger Aero Archive</span>
+          <span class="header-motto">Enjoy 2000s wallpapers, music, games, and much more!</span>
+        </div>
+      </div>
+      <div class="toggle-buttons-divs">
+        <span id="hideNavbarButtonText">Menu ></span>
+        <img src="images/navbar_button.png" alt="Toggle Menu Button" id="navbarToggleButton" />
+      </div>
+    </header>
+
+    <div id="navAndContentContainer">
+      <!-- Left Side -->
+      <aside>
+        <div id="navigationMenu">
+          <!-- Main Content -->
+          <nav class="nav-categories" aria-label="Navigation Category: Main Content">
+            <span class="navbar-titles">Main Content</span>
+            <a href="index" class="nav-inactive">
+              <img src="images/introduction.png" class="nav-icons" alt="Windows Vista Box Icon" />Introduction</a>
+            <a href="wallpapers" class="nav-inactive">
+              <img src="images/wallpapers.png" class="nav-icons" alt="Windows Vista Gallery Icon" />Wallpapers</a>
+            <a href="resources" class="nav-inactive">
+              <img src="images/resources.png" class="nav-icons" alt="Windows Vista Marketplace Icon" />Resources</a>
+            <a href="history" class="nav-inactive">
+              <img src="images/history.png" class="nav-icons" alt="Windows Vista Presentation Icon" />History</a>
+            <a href="icons" class="nav-inactive">
+              <img src="images/icons.png" class="nav-icons" alt="Windows Personalization Icon" />Icons</a>
+            <a href="blog/home" class="nav-inactive">
+              <img src="images/blog.png" class="nav-icons" alt="Notepad Logo" />Blog</a>
+          </nav>
+          <!-- Entertainment -->
+          <nav class="nav-categories" aria-label="Navigation Category: Entertainment">
+            <span class="navbar-titles">Entertainment</span>
+            <a href="music" class="nav-active">
+              <img src="images/music.png" class="nav-icons" alt="Windows Vista Media Player Icon" />Music Player</a>
+            <a href="flash_media" class="nav-inactive">
+              <img src="images/flash_media.png" class="nav-icons" alt="Macromedia Flash Logo" />Flash Media</a>
+            <a href="indie_games" class="nav-inactive">
+              <img src="images/indie_games.png" class="nav-icons" alt="Games Icon" />Indie Games</a>
+            <a href="televisions" class="nav-inactive">
+              <img src="images/televisions.png" class="nav-icons" alt="CRT TV" />Televisions</a>
+            <a href="videos" class="nav-inactive">
+              <img src="images/videos.png" class="nav-icons" alt="Movie Reel Icon" />Videos</a>
+          </nav>
+          <!-- Community -->
+          <nav class="nav-categories" aria-label="Navigation Category: Community">
+            <span class="navbar-titles">Community</span>
+            <a href="forum_directory" class="nav-inactive">
+              <img src="images/forum.png" class="nav-icons" alt="MSN Buddy" />Web Forums</a>
+            <a href="aero_webring" class="nav-inactive">
+              <img src="images/aero_webring.png" class="nav-icons" alt="Globe Icon" />Aero Webring</a>
+            <a href="sketchbook" class="nav-inactive">
+              <img src="images/sketchbook.png" class="nav-icons" alt="MS Paint Icon" />Sketchbook</a>
+            <a href="other_links" class="nav-inactive">
+              <img src="images/other_links.png" class="nav-icons" alt="Globe next to a monitor" />Other Links</a>
+            <a href="guestbook" class="nav-inactive">
+              <img src="images/guestbook.png" class="nav-icons" alt="Journal with a pen" />Guestbook</a>
+          </nav>
+          <!-- Website -->
+          <nav class="nav-categories" aria-label="Navigation Category: Website">
+            <span class="navbar-titles">Website</span>
+            <a href="site_mascot" class="nav-inactive">
+              <img src="images/site_mascot.png" class="nav-icons" alt="Archive-Tan" />Mascot</a>
+            <a href="site_info" class="nav-inactive">
+              <img src="images/site_info.png" class="nav-icons" alt="Blue i logo" />Site Info</a>
+            <a href="https://ko-fi.com/frutigeraeroarchive" class="nav-inactive">
+              <img src="images/donate.png?v=1.1" class="nav-icons" alt="Ko-fi Icon" />Donate</a>
+          </nav>
+
+          <!-- Options -->
+          <div class="nav-categories nav-sound-fx-container">
+            <button id="navSoundToggle" aria-label="Sound FX Toggle">
+              Sounds Off
+            </button>
+            <button id="navThemeChanger" aria-label="Theme Changer">
+              Themes
+            </button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Middle Content -->
+      <main id="mainContent" aria-label="Main Content">
+        <header>
+          <h1>Listen to Music</h1>
+
+          <div class="glass-borders">
+            <div class="header-div styled-containers aero-borders">
+              <img src="/images/themes/default/music_header.png?v=1.1" alt="Header Image" class="music-header-img"
+                id="musicHeaderImage" />
+              <p>
+                Enjoy listening to Frutiger Aero music in the playlist down
+                below as well as classics from the 2000s and 2010s, nightcore,
+                Frutiger Metro, and other of my personal favorites.
+                <a href="//clap.fc2.com/post/frutigeraeroarchive/?url=https%3A%2F%2Ffrutigeraeroarchive.org%2Fmusic&title=Frutiger+Aero+Archive+-+Music+Player"
+                  target="_blank" class="external-links"
+                  title="Let me know if you liked this page by sending a clap">Clap for this page</a><br />
+                <a id="toggleScreensaver1" title="Toggle Beach Background">Aquarium</a>
+                <span class="separator-1">|</span>
+                <a id="toggleScreensaver2" title="Toggle Beach Background">Tropical Beach</a>
+                <span class="separator-2">|</span>
+                <a id="changeWallpaper" title="Upload Wallpaper">Upload Wallpaper</a>
+                <span class="separator-3">|</span>
+                <a id="toggleDancer" title="Toggle Dancer GIF">Toggle Dancer</a>
+              </p>
+            </div>
+          </div>
+        </header>
+
+        <div class="glass-borders music-player-container">
+          <div class="aero-borders">
+            <div class="music-player-header">
+              <span>Music Player ♪</span>
+            </div>
+
+            <div class="music-player-controls">
+              <button id="previousSong">
+                <img src="/images/music_player/music_player_back.png" alt="Music Player - Back Button" />
+              </button>
+
+              <button id="playPause" title="Play / Pause">
+                <img src="/images/music_player/music_player_play.png" id="audioPlayPauseImage"
+                  alt="Music Player - Play / Pause Button" />
+              </button>
+
+              <button id="nextSong">
+                <img src="/images/music_player/music_player_forward.png" alt="Music Player - Forward Button" />
+              </button>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="progress-container">
+              <div class="progress-text-div">
+                <span id="timeCaption">Time Left:</span>
+                <span id="timeLeft">2:24</span>
+              </div>
+              <input type="range" id="progressBar" value="0" max="100" step="0.01"
+                aria-label="Music Player Progress Bar" title="Progress Bar" />
+
+              <!-- Randomize -->
+              <button id="audioRandomize" title="Randomize Songs" aria-label="Randomize Songs">
+                RANDOM
+              </button>
+
+              <!-- Shuffle -->
+              <button id="audioShuffle" title="Toggle Shuffle" aria-label="Toggle Shuffle">
+                SHUFFLE
+              </button>
+
+              <!-- Loop -->
+              <button id="audioLoop" title="Toggle Music Loop" aria-label="Toggle Music Loop">
+                <img src="/images/music_player/music_player_loop_off.png" alt="Music Player - Loop Button"
+                  id="audioLoopImage" />
+              </button>
+            </div>
+
+            <div id="musicPlayer">
+              <!-- Left -->
+              <div class="music-player-left-side">
+                <!-- Music Playlist -->
+                <div class="music-playlist" id="musicPlaylist"></div>
+              </div>
+
+              <!-- Right -->
+              <div class="music-player-right-side" id="sidePanel">
+                <!-- Video Player -->
+                <div class="music-player-video">
+                  <img src="/televisions/images/curved_screen.png" alt="Curved Sreen" id="curvedScreen" />
+                  <!-- <div id="scanlines"></div> -->
+                  <!-- Iframe -->
+                  <div id="musicVideoPlayer"></div>
+                </div>
+
+                <div class="current-album">
+                  <img src="/images/music_player/jewel_case.png" alt="Jewel Case" id="jewelCase" />
+                  <img src="/images/music_player/albums/frutiger_aero_bliss.jpg" id="albumCover" title="Toggle CD" />
+
+                  <img src="/images/music_player/cd.png" id="spinningDisk" alt="Spinning disk" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls Bar -->
+            <div class="volume-slider-container">
+              <button id="muteButton" class="volume-ui" aria-label="muteButton" title="Mute">
+                <img src="/images/music_player/volume_medium.png" alt="Volume" id="volumeImage" />
+              </button>
+              <input type="range" id="volumeSlider" class="volume-ui" aria-label="Music Player Volume Bar" min="0"
+                max="100" step="1" value="100" title="Volume" />
+              <span id="volumeText" class="volume-ui">Volume:</span>
+              <span id="volumeIndicator" class="volume-ui">100</span>
+
+              <button id="hideSide" aria-label="Toggle Side pannel" title="Toggle Side Pannel">
+                <span id="hideSideText">Hide Sidebar</span>
+                <img src="/images/music_player/sidebar_on.png" alt="Picture Frame" id="sideButtonImage" />
+              </button>
+
+              <button id="hideBackground" aria-label="Hide Music Artwork" title="Toggle Music Artwork">
+                <span id="hideBackgroundText">Hide Artwork</span>
+                <img src="images/music_player/artwork_on.png" alt="Picture Frame" id="hideBackgroundImage" />
+              </button>
+            </div>
+
+            <div class="music-player-status">
+              <div class="js-currently-playing">
+                <span>Currently playing: </span><span id="audioName"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Song Info -->
+        <div class="glass-borders">
+          <article class="styled-containers styled-containers-spaced aero-borders" aria-label="Song Information">
+            <h2>Song Information</h2>
+            <p>
+              Title:
+              <strong id="songTitle"></strong>
+            </p>
+
+            <p>
+              Source:
+              <a href="" target="_blank" title="Open YouTube (External Link)" class="external-links"
+                id="songYouTube"></a>
+            </p>
+
+            <p id="songDescription"></p>
+          </article>
+        </div>
+
+        <!-- Album Selection -->
+        <div id="albumSelection">
+          <div class="glass-borders album-selection-div">
+            <div class="styled-containers styled-containers-spaced aero-borders" aria-label="Select Album">
+              <header>
+                <h2>2000s Nostalgia</h2>
+                <span>Playlists of songs of different styles common in the 00s
+                  and on early YouTube.</span>
+              </header>
+
+              <nav class="album-selection-container">
+                <!-- FA Bliss -->
+                <a href="#" id="frutigerAeroBliss" class="albums">
+                  <img src="/images/music_player/albums/frutiger_aero_bliss.jpg" alt="Frutiger Aero Bliss Cover"
+                    class="album-covers" title="Frutiger Aero Bliss" /></a>
+
+                <!-- 2000s/2010s Nostalgia -->
+                <a href="#" id="2000s2010s" class="albums">
+                  <img src="/images/music_player/albums/2000s_2010s.jpg" alt="2000s/2010s Nostalgia Cover"
+                    class="album-covers" title="2000s/2010s Nostalgia" /></a>
+
+                <!-- EDM / Trance -->
+                <a href="#" id="edmTrance" class="albums">
+                  <img src="/images/music_player/albums/edm_trance.jpg" alt="EDM / Trance Cover" class="album-covers"
+                    title="EDM / Trance" /></a>
+
+                <!-- Nightcore -->
+                <a href="#" id="nightcore" class="albums">
+                  <img src="/images/music_player/albums/nightcore.jpg?v=1.5" alt="Nightcore Cover" class="album-covers"
+                    title="Nightcore" /></a>
+
+                <!-- Vocaloid -->
+                <a href="#" id="vocaloid" class="albums">
+                  <img src="/images/music_player/albums/vocaloid.jpg" alt="Vocaloid Cover" class="album-covers"
+                    title="Vocaloid" /></a>
+
+                <!-- Touhou Project -->
+                <a href="#" id="touhou" class="albums">
+                  <img src="/images/music_player/albums/touhou.jpg" alt="Touhou Project Cover" class="album-covers"
+                    title="Touhou Project" /></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-borders album-selection-div">
+          <div class="styled-containers styled-containers-spaced aero-borders" aria-label="Select Album">
+            <header>
+              <h2>Other Music</h2>
+              <span>Anime soundtracks or other off-topic music that I enjoy
+                listening to.</span>
+            </header>
+
+            <nav class="album-selection-container">
+              <!-- LittleBigPlanet -->
+              <a href="#" id="lbp" class="albums">
+                <img src="/images/music_player/albums/lbp.jpg" alt="LittleBigPlanet Cover" class="album-covers"
+                  title="LittleBigPlanet" /></a>
+
+              <!-- LittleBigPlanet 2 -->
+              <a href="#" id="lbp2" class="albums">
+                <img src="/images/music_player/albums/lbp2.jpg" alt="LittleBigPlanet 2 Cover" class="album-covers"
+                  title="LittleBigPlanet 2" /></a>
+
+              <!-- Call of Duty 4: Modern Warfare -->
+              <a href="#" id="cod_mw" class="albums">
+                <img src="/images/music_player/albums/cod_mw.jpg" alt="Call of Duty 4: Modern Warfare Cover"
+                  class="album-covers" title="Call of Duty 4: Modern Warfare" /></a>
+
+              <!-- Call of Duty: Modern Warfare 2 -->
+              <a href="#" id="cod_mw2" class="albums">
+                <img src="/images/music_player/albums/cod_mw2.jpg" alt="Call of Duty: Modern Warfare 2 Cover"
+                  class="album-covers" title="Call of Duty: Modern Warfare 2" /></a>
+
+              <!-- Daft Punk Discovery -->
+              <a href="#" id="daftPunkDiscovery" class="albums">
+                <img src="/images/music_player/albums/daft_punk_discovery.jpg" alt="Daft Punk Discovery Cover"
+                  class="album-covers" title="Daft Punk Discovery" /></a>
+
+              <!-- Minecraft Nostalgia -->
+              <a href="#" id="minecraftNostalgia" class="albums">
+                <img src="/images/music_player/albums/minecraft_nostalgia.jpg" alt="Minecraft Nostalgia Cover"
+                  class="album-covers" title="Minecraft Nostalgia" /></a>
+
+              <!-- Upbeat J-POP -->
+              <a href="#" id="upbeatJpop" class="albums">
+                <img src="/images/music_player/albums/upbeat_jpop.jpg" alt="Upbeat J-POP Cover" class="album-covers"
+                  title="Upbeat J-POP" /></a>
+
+              <!-- Naruto -->
+              <a href="#" id="naruto" class="albums">
+                <img src="/images/music_player/albums/naruto.jpg" alt="Naruto Cover" class="album-covers"
+                  title="Naruto" /></a>
+
+              <!-- K-ON! -->
+              <a href="#" id="kOn" class="albums">
+                <img src="/images/music_player/albums/k-on.jpg" alt="K-ON! Cover" class="album-covers"
+                  title="K-ON!" /></a>
+
+              <!-- Steins;Gate -->
+              <a href="#" id="steinsGate" class="albums">
+                <img src="/images/music_player/albums/steins_gate.jpg?v=1.1" alt="Steins;Gate Cover"
+                  class="album-covers" title="Steins;Gate" /></a>
+
+              <!-- Kanon -->
+              <a href="#" id="kanon" class="albums">
+                <img src="/images/music_player/albums/kanon.jpg" alt="Kanon Cover" class="album-covers"
+                  title="Kanon" /></a>
+
+              <!-- Planetarian: The Reverie of a Little Planet -->
+              <a href="#" id="planetarian" class="albums">
+                <img src="/images/music_player/albums/planetarian.jpg"
+                  alt="Planetarian: The Reverie of a Little Planet Cover" class="album-covers"
+                  title="Planetarian: The Reverie of a Little Planet" /></a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Local Music Player -->
+        <div class="glass-borders">
+          <nav class="styled-containers styled-containers-spaced aero-borders">
+            <h2>Local Music Player & Extras</h2>
+            <p style="text-align: center">
+              <a href="music_players/local" style="font-size: 1.5em">Switch to local music player (MP3 based)</a>
+            </p>
+
+            <p style="text-align: center; margin-top: 10px">
+              Downloads:
+              <a href="files/archives/music_backgrounds.zip" class="download-links">Backgrounds (46.8 MB)</a>
+              |
+              <a href="files/archives/music_json.zip" class="download-links">JSON data (138 KB)</a>
+            </p>
+          </nav>
+        </div>
+
+        <!-- Updates -->
+        <div class="glass-borders" id="updates">
+          <article class="styled-containers styled-containers-spaced aero-borders">
+            <h2>Updates</h2>
+            <p>
+              Here you can see the latest updates and songs added to the Music
+              Player.
+            </p>
+
+            <div class="recent-updates-div styled-containers styled-containers-layer-2 aero-borders">
+              <ul>
+                <li>
+                  <p>
+                    <strong>04 August 2026</strong> - Massive update to the
+                    Frutiger Aero Album - Added over 100 songs, from the Wii,
+                    and also the local music player album, so I included
+                    albums like 2006 by Zescrew2 and Frutiger Aero by
+                    temcandoanything, as well as Garoad's and a few other
+                    smaller artists.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>31 August 2026</strong> - Added info section that
+                    shows the title & URL, might add more metadata later on.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>28 August 2026</strong> - Added 7 new songs to
+                    2000s nostalgia, added Call of Duty 4 and MW2 albums, and
+                    LittleBigPlanet 1 & 2 albums.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>27 August 2026</strong> - Added 5 new Nightcore
+                    tracks. Added downloads of music JSON files that contain
+                    all links etc of the YouTube, local, and legacy music
+                    players.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>21 August 2026</strong> - Added song: MACINTOSH
+                    PLUS - FLORAL SHOPPE - 07 数学, MACINTOSH PLUS -
+                    WELCOME大きな家HOME.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>15 August 2026</strong> - Added back Aquatic
+                    ambience restored and the scizzie version.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>14 August 2026</strong> - Fixed incorrect song
+                    link for Carnation - Edo River in Upbeat J-POP. Added 2
+                    new albums: Daft Punk Discovery and Minecraft Nostalgic
+                    Songs. Media keys should now work when the tab is active,
+                    couldn't figure it out for inactive tabs yet.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>12 August 2026</strong> - Added PS3 Photo Gallery
+                    soundtrack, uploaded by Tokoni on YouTube, for the
+                    downloads, go visit the
+                    <a href="https://archive.org/details/ps3photogalleryrip/">archived version</a>.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>10 August 2026</strong> - Added album and artist
+                    metadata in uploaded songs in the local music player,
+                    added jewel case and scanlines to the video.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>09 August 2026</strong> - Someone requested it, so
+                    I added back the old MP3 player as an option in a link
+                    above.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>08 August 2026</strong> - Added randomize button,
+                    added 21 new Nightcore tracks, and songs from the previous
+                    "Frutiger Metro" album have been added to 2000s/2010s
+                    nostalgia, added 18 new songs to Frutiger Aero Bliss.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>07 August 2026</strong> - Not sure whether to keep
+                    the "local" music player online anymore, the one that
+                    played MP3s instead of YouTube videos, and the reason is
+                    that I can't really update it as much because of
+                    copyright, even if functionally, it performed better in
+                    some ways.
+                  </p>
+
+                  <p>
+                    For now I chose to remove it entirely, I'm not sure
+                    whether to add it back later or not as an option, that
+                    depends if people request me to do it. On my personal
+                    website, my music player always worked with YouTube and
+                    nobody ever said anything about it, so I guess people have
+                    more expectations for this one, which means they use it a
+                    lot, which is cool but also super scary.
+                  </p>
+                  <p>
+                    Anyways I spent a few hours yesterday adding back the
+                    individual song background images, instead of just one by
+                    album, which adds back a lot of the "charm" of the old
+                    music player.
+                  </p>
+                  <p>
+                    I also added back the album covers in the album selection
+                    section below, which had been replaced by an unorganized
+                    list (ul). I also added back the "hide artwork" button,
+                    mostly to fill up empty space in the bar below.
+                  </p>
+                  <p>
+                    Some songs I added these past days got removed, that's
+                    because I had to re-convert the old playlist to the new
+                    JSON in order to not add back each song images manually,
+                    instead I ported the old ones.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>30 July 2026</strong> - Added albums: Naruto,
+                    K-ON!, Planetarian: The Reverie of a Little Planet.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>29 July 2026</strong> - Added Shuffle and loop
+                    button and new songs to Nightcore.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>28 July 2026</strong> - Added scizzie - aquatic
+                    ambience.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>27 July 2026</strong> - Added 2 new albums:
+                    Touhou, Upbeat J-POP, changed background images and
+                    improved UI, added function to hide the spinning CD in the
+                    album cover when clicking it. Added song Saturday by
+                    Basshunter in EDM/Trance.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>25 July 2026</strong> - Fixed 2 missing songs in
+                    Steins;Gate album.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>24 July 2026</strong> - Updated UI, added progress
+                    bar, also added headings for the playlists.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>20 July 2026</strong> - Overhauled UI, made
+                    responsive for mobile devices, added Frutiger Aero Bliss
+                    and Steins;Gate, Kanon albums. Update 2: Added volume
+                    slider.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>08 July 2026</strong> - Added album-specific
+                    background images.
+                  </p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>07 July 2026</strong> - Autoplay shouldn't be
+                    enabled on the first video anymore.
+                  </p>
+                </li>
+
+                <li>
+                  <p><strong>29 June 2026</strong> - VOCALOID album added.</p>
+                </li>
+
+                <li>
+                  <p>
+                    <strong>20 June 2026</strong> - Still working on
+                    transferring the songs from the older music player
+                    playlist.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
+    <!-- Spacer -->
+    <div class="website-spacers"></div>
+  </div>
+  <span id="themeSongCaption" class="hidden"></span>
+
+  <img src="/images/themes/default/music_dancer.gif" alt="Dancing character" id="musicDancerImage" />
+  <script src="javascript/navbar.min.js?v=2.7" async></script>
+  <script src="javascript/music-player.min.js?v=11.4" async></script>
+</body>
+
+</html>
