@@ -166,6 +166,15 @@
             background: transparent;
         }
 
+         .nav-link:hover {
+            color: var(--heading);
+            background: var(--surface-hover);
+            border-color: transparent;
+            border-left-color: var(--accent);
+            border-radius: 0 10px 10px 0;
+            box-shadow: none;
+        }
+
         .nav-link.active {
             color: var(--accent);
             background: var(--surface-active);
