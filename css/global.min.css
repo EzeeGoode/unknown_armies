@@ -354,7 +354,7 @@
         line-height: 0;
         text-align: center;
         background: transparent;
-        box-shadow: none;
+        
     }
 
     .content-title {
@@ -444,7 +444,7 @@
             display: block;
         }
 
-        
+
     .sidebar {
         position: fixed;
         top: 0;
