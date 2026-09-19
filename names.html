@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Unknown Armies TRPG database" />
+    <title>UA TRPG — Unknown Armies</title>
+
+    <link rel="stylesheet" href="css/global.min.css" />
+    <link rel="icon" type="image/png" href="images/favicon/apple-touch-icon.png?v=1.1" />
+
+    <style>
+        @font-face {
+            font-family: "DaxlinePro-Regular";
+            src: url("fonts/DaxlinePro-Regular.otf") format("opentype");
+            font-style: normal;
+            font-weight: 100;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "DaxlineCyrTF-Bold";
+            src: url("fonts/DaxlineCyrTF-Bold.otf") format("opentype");
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        /* остальной CSS */
+    </style>
+</head>
+
+<body>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="sidebar">
+        Меню
+    </button>
+
+    <div class="site">
+        <aside class="sidebar" id="sidebar" aria-label="Основная навигация">
+            <nav class="nav-group" aria-label="Об игре">
+                <span class="nav-title">Об игре</span>
+
+                <a class="nav-link inactive" href="index.html">
+                    <img class="nav-icon" src="images/introduction.png" alt="" />
+                    Начало
+                </a>
+
+                <a class="nav-link active" href="names.html">
+                    <img class="nav-icon" src="images/wallpapers.png" alt="" />
+                    Тайные имена улиц
+                </a>
+
+                <a class="nav-link inactive" href="rules.html">
+                    <img class="nav-icon" src="images/guestbook.png" alt="" />
+                    Правила
+                </a>
+
+
+            </nav>
+
+            <nav class="nav-group" aria-label="Комьюнити">
+                <span class="nav-title">Комьюнити</span>
+
+                <a class="nav-link inactive" href="anketa.html">
+                    <img class="nav-icon" src="images/music.png" alt="" />
+                    Анкета
+                </a>
+
+                <a class="nav-link inactive" href="pregens.html">
+                    <img class="nav-icon" src="images/flash_media.png" alt="" />
+                    Прегены
+                </a>
+
+                <a class="nav-link inactive" href="identity.html">
+                    <img class="nav-icon" src="images/indie_games.png" alt="" />
+                    Личность
+                </a>
+
+                <a class="nav-link inactive" href="identity.html">
+                    <img class="nav-icon" src="images/indie_games.png" alt="" />
+                    Личности
+                </a>
+
+                <a class="nav-link inactive" href="super.html">
+                    <img class="nav-icon" src="images/televisions.png" alt="" />
+                    Сверхи
+                </a>
+
+                <a class="nav-link inactive" href="adepts.html">
+                    <img class="nav-icon" src="images/videos.png" alt="" />
+                    Адепты
+                </a>
+
+                <a class="nav-link inactive" href="avatars.html">
+                    <img class="nav-icon" src="images/blog.png" alt="" />
+                    Аватары
+                </a>
+
+            </nav>
+
+            <nav class="nav-group" aria-label="Сеттинг">
+                <span class="nav-title">Сеттинг</span>
+
+                <a class="nav-link inactive" href="blighty.html">
+                    <img class="nav-icon" src="images/forum.png" alt="" />
+                    Блайти
+                </a>
+
+                <a class="nav-link inactive" href="history.html">
+                    <img class="nav-icon" src="images/aero_webring.png" alt="" />
+                    История
+                </a>
+
+                <a class="nav-link inactive" href="life.html">
+                    <img class="nav-icon" src="images/sketchbook.png" alt="" />
+                    Жизнь людей
+                </a>
+
+                <a class="nav-link inactive" href="groups.html">
+                    <img class="nav-icon" src="images/other_links.png" alt="" />
+                    Группы
+                </a>
+
+
+            </nav>
+
+            <nav class="nav-group" aria-label="Магия">
+                <span class="nav-title">М`агия</span>
+
+                <a class="nav-link inactive" href="magic.html">
+                    <img class="nav-icon" src="images/site_mascot.png" alt="" />
+                    Пути адептов
+                </a>
+
+                <a class="nav-link inactive" href="archetypes.html">
+                    <img class="nav-icon" src="images/site_info.png" alt="" />
+                    Архетипы
+                </a>
+
+                <a class="nav-link inactive" href="sewer.html">
+                    <img class="nav-icon" src="images/donate.png?v=1.1" alt="" />
+                    Сточная м`агия
+                </a>
+                <a class="nav-link inactive" href="rituals.html">
+                    <img class="nav-icon" src="images/donate.png?v=1.1" alt="" />
+                    Ритуалы
+                </a>
+                <a class="nav-link inactive" href="artifacts.html">
+                    <img class="nav-icon" src="images/donate.png?v=1.1" alt="" />
+                    Артефакты
+                </a>
+            </nav>
+
+            <button class="vk-button" type="button">Группа Вк</button>
+        </aside>
+
+
+
+
+        <main class="main">
+            <div class="content">
+                <h1 class="page-title">Тайные имена улиц</h1>
+
+                <img class="hero" src="images/themes/introduction_banner.png" alt="Unknown Armies" />
+
+                <article class="panel article">
+                    <p>Под живым отражением небес пролегают улицы с тайными именами. Они соединяют глухие задворки
+                        цивилизации со свободной Вселенной и ведут тебя в оккультный андеграунд. Его нет на картах, его
+                        номера нет в справочнике, но ты знаешь, что он существует – вернее, обязан существовать.</p>
+
+
+                    <p> До тебя доходят слухи. Про песню, вызывающую самоубийство. Про человека, чье лицо меняется с
+                        каждым
+                        рассветом. В даркнете ищут кассету с рождением богини. Слухов множество, разных, звучащих на
+                        сектантских проповедях и шепотом на светских раутах, и исходят они от разных людей, самых
+                        эксцентричных и самых невидимых.</p>
+
+                    <p>Однажды алкаш у паба зажег сигарету щелчком пальцев, и ты это заметил. В ответ он оправдался:
+                        «Это
+                        всего лишь магия. Фокус». Фокусник вытащил четвертак из-за твоего уха, и пусть тогда вера в чудо
+                        пошатнулась, привкус истины остался.</p>
+
+                    <p>Наконец, ты понял, на что надо обращать внимание. На взгляд. Заметив раз, ты уже не можешь не
+                        видеть
+                        его, время от времени ты ловишь его у случайных встречных. Порой он напоминает ломку наркомана,
+                        порой – самодовольство зажравшегося магната. По утрам, в полудрёме или в туалетах ночных клубов
+                        ты
+                        пялишься в зеркало и ищешь этот взгляд.</p>
+
+                    <p>Ты хочешь его сейчас. Хочешь знать то же, что известно им.</p>
+
+                    <p>Судьба человечества вершится на улицах с тайными именами, ты видишь отголоски войны неизвестных
+                        армий в заголовках газет и в размытом изображении с экрана. Власти, ученые, - да все подряд! -
+                        скрывают от тебя что-то важное. Ты должен знать больше. Обыденного мира уже не хватает. Порой
+                        хочется отбросить эту реальность и скользнуть в измерение чистого понимания. Где-то есть
+                        умозрительное место, – место идей, – где заключены все ответы и решения всех твоих проблем.</p>
+
+                    <p>Тебе плевать, что там опасно. Люди пропадают, умирают и сходят с ума. И всё ради какой-то тайны,
+                        лежащей в сердце незримого мира. Этот мир – оккультный андеграунд. И ты должен найти его раньше,
+                        чем
+                        он найдёт тебя.</p>
+
+
+                    <p>Есть три уровня, на которых идет игра: Уличный, Глобальный и Космический. Квесты заранее
+                        определяются с масштабом замеса.
+                        На низшем, уличном уровне, персонажи — обычные люди, сталкивающиеся с неведомым. На втором
+                        уровне
+                        персонажи — члены оккультного андеграунда, они знают о том, что магия работает, знают про
+                        объединения магов и их соперничество (хотя, скорее всего, не знают причин конфликта), и, скорее
+                        всего, владеют какими-то способностями сами. Наконец, третий уровень подразумевает, что
+                        персонажи
+                        знают правду о тайных хозяевах вселенной – пантеоне современных богов, Архетипов коллективного
+                        бессознательного. Усилия персонажей космического уровня направлены на собственное возвышение или
+                        влияние на пантеон. Создавая персонажа, ты заранее метишь в лигу. Каждый уровень предполагает
+                        тайное
+                        знание, и ты можешь сам выбрать, что доступно твоему персонажу на старте – чисто для удобства
+                        отыгрыша.</p>
+
+                </article>
+
+                <h3 class="content-title">Об игре</h3>
+
+                <article class="panel article">
+                    <p>
+                        «Неизвестные армии» — игра о современном оккультизме,
+                        конспирологии и городских легендах. Основная идея сеттинга —
+                        «консенсусная реальность»: мир таков, каков он есть, потому
+                        что человечество в целом считает, что таковым он и должен быть.
+                        С последствиями коллективного бессознательного тебе и предстоит
+                        столкнуться.
+                    </p>
+
+                    <p>
+                        Стоит лишь немного окунуться во всё это, как со временем
+                        начинаешь улавливать суть. Люди нуждаются в принятии важных
+                        решений, поэтому они «обнаруживают» новые правила игры и
+                        «разоблачают» новые законы вселенной, придавая случайным вещам
+                        значимость и магическую силу.
+                    </p>
+
+                    <p>
+                        Нумерологией становятся одержимы те, кто хочет влиять на своё
+                        будущее, а теориями заговора — те, кто мечтает найти виновника
+                        всех бед. В конце концов, всё начинается с ужасной проблемы и
+                        сломленного человека, готового на любые безумства ради её
+                        исправления.
+                    </p>
+
+                    <p>
+                        «Неизвестные армии» — это игра о сломленных людях, которые
+                        сговорились починить мир. Они хотят социальной справедливости,
+                        возмездия, искупления грехов или просто большого куска пирога.
+                        Но никто им этого просто так не даст. Честно говоря, Вселенной
+                        на них плевать.
+                    </p>
+
+                    <p>
+                        Вместо того чтобы останавливать злобных культистов, убивать
+                        монстров или защищать статус-кво, ты и есть культист, монстр
+                        или безумец. Твоя задача — создать персонажа, для которого
+                        «как обычно» невыносимо.
+                    </p>
+                </article>
+
+                <div class="content">
+                    <article class="panel article">
+                        <details class="spoiler">
+                            <summary class="spoiler-summary">
+                                <span class="chev" aria-hidden="true">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+                                        <path d="M8 5L16 12L8 19" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+
+                                <header class="spoiler-header">
+                                    <h2>Название спойлера</h2>
+                                    <p>
+
+                                    </p>
+                                </header>
+                            </summary>
+
+                            <div class="spoiler-body">
+                                Текст спойлера
+                            </div>
+                        </details>
+                    </article>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const menuButton = document.getElementById("menuButton");
+        const sidebar = document.getElementById("sidebar");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = sidebar.classList.toggle("open");
+
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.textContent = isOpen ? "Закрыть" : "Меню";
+        });
+
+        document.querySelectorAll(".sidebar a").forEach((link) => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 800) {
+                    sidebar.classList.remove("open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                    menuButton.textContent = "Меню";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
