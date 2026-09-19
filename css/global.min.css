@@ -4,16 +4,16 @@
         src: url("fonts/DaxlinePro-Regular.otf") format("opentype");
         font-style: normal;
         font-weight: 400;
-        font-display: block;
+        font-display: swap;
     }
 
     @font-face {
-    font-family: "DaxlineCyrTF-Bold";
-    src: url("fonts/DaxlineCyrTF-Bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: 700;
-    font-display: block;
-}
+        font-family: "DaxlineCyrTF-Bold";
+        src: url("fonts/DaxlineCyrTF-Bold.otf") format("opentype");
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+    }
 
     :root {
         --page-bg: #101114;
@@ -293,7 +293,6 @@
 }
 
 
-
     .page-title {
         margin: 25px 0 25px;
         padding: 0;
@@ -304,7 +303,7 @@
             Geneva,
             Verdana,
             sans-serif;
-        font-size:  32px;
+        font-size: clamp(25px, 2.4vw, 32px);
         font-weight: 700;
         line-height: 0;
         text-align: center;
@@ -414,6 +413,17 @@
     .sidebar.open {
         transform: translateX(0);
     }
+
+    
+    .page-title {
+        width: 100%;
+        margin: 0 0 14px;
+        padding: 0 6px;
+        font-size: clamp(18px, 8vw, 28px);
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
 
     .main {
         display: block;
