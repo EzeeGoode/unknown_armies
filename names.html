@@ -16,7 +16,7 @@
             src: url("fonts/DaxlinePro-Regular.otf") format("opentype");
             font-style: normal;
             font-weight: 100;
-            font-display: auto;
+            font-display: swap;
         }
 
         @font-face {
@@ -24,7 +24,7 @@
             src: url("fonts/DaxlineCyrTF-Bold.otf") format("opentype");
             font-style: normal;
             font-weight: 700;
-            font-display: auto;
+            font-display: swap;
         }
 
         /* остальной CSS */
@@ -51,10 +51,27 @@
                     Тайные имена улиц
                 </a>
 
-                <a class="nav-link inactive" href="rules.html">
-                    <img class="nav-icon" src="images/guestbook.png" alt="" />
-                    Правила
+                <a class="nav-link inactive" href="streets.html">
+                    <img class="nav-icon" src="images/resources.png" alt="" />
+                    Улицы
                 </a>
+
+                <a class="nav-link inactive" href="world.html">
+                    <img class="nav-icon" src="images/world.png" alt="" />
+                    Мир
+                </a>
+
+                <a class="nav-link inactive" href="space.html">
+                    <img class="nav-icon" src="images/icons.png" alt="" />
+                    Космос
+                </a>
+
+                <a class="nav-link inactive" href="pregens.html">
+                    <img class="nav-icon" src="images/flash_media.png" alt="" />
+                    Прегены
+                </a>
+
+
 
 
             </nav>
@@ -67,10 +84,7 @@
                     Анкета
                 </a>
 
-                <a class="nav-link inactive" href="pregens.html">
-                    <img class="nav-icon" src="images/flash_media.png" alt="" />
-                    Прегены
-                </a>
+
 
                 <a class="nav-link inactive" href="identity.html">
                     <img class="nav-icon" src="images/indie_games.png" alt="" />
@@ -95,6 +109,11 @@
                 <a class="nav-link inactive" href="avatars.html">
                     <img class="nav-icon" src="images/blog.png" alt="" />
                     Аватары
+                </a>
+
+                <a class="nav-link" href="rules.html">
+                    <img class="nav-icon" src="images/guestbook.png" alt="" />
+                    Правила
                 </a>
 
             </nav>
@@ -162,7 +181,7 @@
             <div class="content">
                 <h1 class="page-title">Тайные имена улиц</h1>
 
-                <img class="hero" src="images/themes/introduction_banner.png" alt="Unknown Armies" />
+                <img class="hero" src="images/themes/names.png" alt="Unknown Armies" />
 
                 <article class="panel article">
                     <p>Под живым отражением небес пролегают улицы с тайными именами. Они соединяют глухие задворки
@@ -201,10 +220,12 @@
                         чем
                         он найдёт тебя.</p>
 
+                </article>
 
+                <article class="panel article">
                     <p>Есть три уровня, на которых идет игра: Уличный, Глобальный и Космический. Квесты заранее
-                        определяются с масштабом замеса.
-                        На низшем, уличном уровне, персонажи — обычные люди, сталкивающиеся с неведомым. На втором
+                        определяются с масштабом замеса.</p>
+                    <p>На низшем, уличном уровне, персонажи — обычные люди, сталкивающиеся с неведомым. На втором
                         уровне
                         персонажи — члены оккультного андеграунда, они знают о том, что магия работает, знают про
                         объединения магов и их соперничество (хотя, скорее всего, не знают причин конфликта), и, скорее
@@ -216,104 +237,35 @@
                         тайное
                         знание, и ты можешь сам выбрать, что доступно твоему персонажу на старте – чисто для удобства
                         отыгрыша.</p>
-
                 </article>
 
-                <h3 class="content-title">Об игре</h3>
 
-                <article class="panel article">
-                    <p>
-                        «Неизвестные армии» — игра о современном оккультизме,
-                        конспирологии и городских легендах. Основная идея сеттинга —
-                        «консенсусная реальность»: мир таков, каков он есть, потому
-                        что человечество в целом считает, что таковым он и должен быть.
-                        С последствиями коллективного бессознательного тебе и предстоит
-                        столкнуться.
-                    </p>
+                <a class="next-page-button" href="streets.html">
+                    Первые шаги по улицам
+                    <span aria-hidden="true">>>></span>
+                </a>
 
-                    <p>
-                        Стоит лишь немного окунуться во всё это, как со временем
-                        начинаешь улавливать суть. Люди нуждаются в принятии важных
-                        решений, поэтому они «обнаруживают» новые правила игры и
-                        «разоблачают» новые законы вселенной, придавая случайным вещам
-                        значимость и магическую силу.
-                    </p>
+                <script>
+                    const menuButton = document.getElementById("menuButton");
+                    const sidebar = document.getElementById("sidebar");
 
-                    <p>
-                        Нумерологией становятся одержимы те, кто хочет влиять на своё
-                        будущее, а теориями заговора — те, кто мечтает найти виновника
-                        всех бед. В конце концов, всё начинается с ужасной проблемы и
-                        сломленного человека, готового на любые безумства ради её
-                        исправления.
-                    </p>
+                    menuButton.addEventListener("click", () => {
+                        const isOpen = sidebar.classList.toggle("open");
 
-                    <p>
-                        «Неизвестные армии» — это игра о сломленных людях, которые
-                        сговорились починить мир. Они хотят социальной справедливости,
-                        возмездия, искупления грехов или просто большого куска пирога.
-                        Но никто им этого просто так не даст. Честно говоря, Вселенной
-                        на них плевать.
-                    </p>
+                        menuButton.setAttribute("aria-expanded", String(isOpen));
+                        menuButton.textContent = isOpen ? "Закрыть" : "Меню";
+                    });
 
-                    <p>
-                        Вместо того чтобы останавливать злобных культистов, убивать
-                        монстров или защищать статус-кво, ты и есть культист, монстр
-                        или безумец. Твоя задача — создать персонажа, для которого
-                        «как обычно» невыносимо.
-                    </p>
-                </article>
-
-                <div class="content">
-                    <article class="panel article">
-                        <details class="spoiler">
-                            <summary class="spoiler-summary">
-                                <span class="chev" aria-hidden="true">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
-                                        <path d="M8 5L16 12L8 19" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-
-                                <header class="spoiler-header">
-                                    <h2>Название спойлера</h2>
-                                    <p>
-
-                                    </p>
-                                </header>
-                            </summary>
-
-                            <div class="spoiler-body">
-                                Текст спойлера
-                            </div>
-                        </details>
-                    </article>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <script>
-        const menuButton = document.getElementById("menuButton");
-        const sidebar = document.getElementById("sidebar");
-
-        menuButton.addEventListener("click", () => {
-            const isOpen = sidebar.classList.toggle("open");
-
-            menuButton.setAttribute("aria-expanded", String(isOpen));
-            menuButton.textContent = isOpen ? "Закрыть" : "Меню";
-        });
-
-        document.querySelectorAll(".sidebar a").forEach((link) => {
-            link.addEventListener("click", () => {
-                if (window.innerWidth <= 800) {
-                    sidebar.classList.remove("open");
-                    menuButton.setAttribute("aria-expanded", "false");
-                    menuButton.textContent = "Меню";
-                }
-            });
-        });
-    </script>
+                    document.querySelectorAll(".sidebar a").forEach((link) => {
+                        link.addEventListener("click", () => {
+                            if (window.innerWidth <= 800) {
+                                sidebar.classList.remove("open");
+                                menuButton.setAttribute("aria-expanded", "false");
+                                menuButton.textContent = "Меню";
+                            }
+                        });
+                    });
+                </script>
 </body>
 
 </html>
